@@ -24,8 +24,11 @@ module.exports = function(grunt) {
 					debugInfo: true,
 					environment: 'development',
 					fontsPath: project.assetDir + 'fonts',
+					force: true,
 					httpPath: "/",
-					imagesPath: project.assetDir + 'img',
+					imagesDir: project.assetDir + 'img/',
+					imagesPath: project.assetDir + 'img/',
+					httpImagesPath: "/" + project.assetDir + 'img/',
 					javascriptsPath: project.assetDir + 'js',
 					outputStyle: 'expanded',
 					sassDir: 'src/sass',
@@ -98,5 +101,4 @@ module.exports = function(grunt) {
 
 	// register tasks here
 	grunt.registerTask('default', ['jshint', 'compass:dev', 'concat', 'copy']);
-	grunt.registerTask('watch', ['watch']);
 };
