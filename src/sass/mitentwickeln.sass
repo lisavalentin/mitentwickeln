@@ -1,4 +1,7 @@
-@import "compass/css3/background-size"
+@import compass
+@import functions
+@import constants
+@import sass_ie
 
 body
 	background: #fff
@@ -23,10 +26,18 @@ body
 	background: image-url("mood-example.jpg")
 		position: center center
 		repeat: no-repeat
-	@include background-size(100% 100%)
-	@include background-size()
+	+background-size(100% 100%)
+	+background-size()
 	overflow: hidden
-	height: 650px
+	height: em(280px)
+	min-width: 400px
 	width: 100%
+	+single-transition(all, .4s)
+	+respond-min($break-2)
+		height: em(400px)
+	+respond-min($break-3)
+		height: em(480px)
+	+respond-min($break-4)
+		height: em(650px)
 	.full-image__image
 		display: none
