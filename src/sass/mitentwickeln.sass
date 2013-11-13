@@ -1,3 +1,32 @@
-/* empty file to start with */
+@import "compass/css3/background-size"
+
 body
 	background: #fff
+	font-family: Helvetica
+	height: 100%
+	margin: 0
+	padding: 0
+	width: 100%
+
+.page-header
+	height: 39px
+	left: 20px
+	position: fixed
+	top: 20px
+	.page-header__title
+		background: image-url("logo.png")
+		height: 39px
+		text-indent: -5000em
+		width: 365px
+
+.full-image
+	background: image-url("mood-example.jpg")
+		position: center center
+		repeat: no-repeat
+	@include background-size(100% 100%)
+	@include background-size()
+	overflow: hidden
+	height: 650px
+	width: 100%
+	.full-image__image
+		display: none
