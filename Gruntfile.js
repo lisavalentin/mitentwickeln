@@ -6,6 +6,7 @@ module.exports = function(grunt) {
 		bannerContent: '/*! <%= pkg.name %> <%= pkg.version %> - ' + '<%= grunt.template.today("yyyy-mm-dd") %> \n' + ' *  License: <%= pkg.license %> */\n',
 		name: '<%= pkg.name %>-<%= pkg.version%>',
 		jqueryVersion: 'jquery-1.10.2.min.js',
+		modernizrVersion: 'modernizr.custom.72109.js',
 		concatJs: '<%= pkg.name %>.js',
 		assetDir: 'assets/'
 	};
@@ -54,7 +55,14 @@ module.exports = function(grunt) {
 			default: {
 				files: [
 					//copy non concatinated scripts
-					{ expand: true, cwd: 'src/javascript', src: [ project.jqueryVersion], dest: project.assetDir + 'js/' },
+					{ 
+						expand: true, 
+						cwd: 'src/javascript', 
+						src: [ 
+							project.jqueryVersion,
+							project.modernizrVersion
+						], 
+						dest: project.assetDir + 'js/' },
 				]
 			}
 		},
