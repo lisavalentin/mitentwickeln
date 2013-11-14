@@ -28,7 +28,7 @@ module.exports = function(grunt) {
 					httpPath: "/",
 					imagesDir: project.assetDir + 'img/',
 					imagesPath: project.assetDir + 'img/',
-					httpImagesPath: "/" + project.assetDir + 'img/',
+					httpImagesPath: '../img/',
 					javascriptsPath: project.assetDir + 'js',
 					outputStyle: 'expanded',
 					sassDir: 'src/sass',
