@@ -1,4 +1,5 @@
 @import compass
+@import fonts
 @import compass/reset
 @import functions
 @import constants
@@ -6,17 +7,23 @@
 
 body
 	background: #fff
-	font-family: Helvetica
+	font-family: Roboto, sans-serif
 	height: 100%
 	margin: 0
 	padding: 0
 	width: 100%
 
+p, li, td, dd, dt
+	line-height: 1.4
+	margin-bottom: .75em
+	&:last-child
+		margin-bottom: 0
+
 .page-header
 	height: 39px
 	left: 50%
 	margin-left: -(365px/2)
-	position: fixed
+	position: absolute
 	top: em(20px)
 	width: 365px
 	.page-header__title
